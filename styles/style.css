@@ -1,9 +1,4 @@
 .page {
-  background-image: var(--bg-image);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
   background-color: var(--bg-color);
   font-size: 18px;
   line-height: 23.4px;
@@ -12,6 +7,11 @@
 }
 
 .header {
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   padding: 0.63rem;
   min-height: 100vh;
   display: grid;
@@ -43,7 +43,7 @@
   filter: drop-shadow(0 0 4px var(--accent-color, #ff0070));
 }
 
-.corner_decor::before {
+.corner-decor::before {
   position: absolute;
   content: '';
   width: 25px;
@@ -54,7 +54,7 @@
   margin: 0.63rem;
 }
 
-.corner_decor::after {
+.corner-decor::after {
   position: absolute;
   content: '';
   width: 25px;
@@ -79,8 +79,7 @@
   align-content: start;
 }
 
-.header_paragraph {
-  display: grid;
+.header__paragraph {
   align-self: center;
   justify-self: end;
 }
@@ -101,6 +100,7 @@
 .header__theme-menu-item {
   color: var(--title-color);
   padding: 0 0.81rem;
+  border: 1px solid transparent;
 }
 
 a:focus-visible {
@@ -112,10 +112,11 @@ a:focus-visible {
   background-color: transparent;
   border: none;
   padding: 0;
+  cursor: pointer;
 }
 
 .header__theme-menu-item:hover {
-  outline: 1px solid var(--hover-color);
+  border: 1px solid var(--hover-color);
 }
 
 .content__link:hover {
@@ -134,7 +135,7 @@ a:focus-visible {
   pointer-events: none;
 }
 
-.content {
+.main {
   display: grid;
   gap: 7.5vh;
   padding: 0.63rem;
@@ -179,7 +180,7 @@ a:focus-visible {
   text-decoration-line: none;
 }
 
-.picture_block {
+.picture-block {
   display: grid;
   gap: 1.5vh;
 }
@@ -214,7 +215,7 @@ a:focus-visible {
 @media (width >= 768px) {
 
   .header,
-  .content {
+  .main {
     padding: 1.25rem;
   }
 
@@ -227,17 +228,17 @@ a:focus-visible {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
-  .header_paragraph {
+  .header__paragraph {
     width: 50%;
   }
 
   .header__decor,
-  .corner_decor::before,
-  .corner_decor::after {
+  .corner-decor::before,
+  .corner-decor::after {
     margin: 1.25rem;
   }
 
-  .content {
+  .main {
     margin-block-start: 40px;
     gap: 5rem;
   }
@@ -259,35 +260,35 @@ a:focus-visible {
     margin-block-start: 1.25rem;
   }
 
-  .first_section,
-  .third_section {
+  .first-section,
+  .third-section {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 1.25rem;
   }
 
-  .first_section .content__title,
-  .third_section .content__title {
+  .first-section .content__title,
+  .third-section .content__title {
     grid-column: 1;
   }
 
-  .first_section .content__block,
-  .third_section .content__block {
+  .first-section .content__block,
+  .third-section .content__block {
     grid-column: 2;
   }
 
-  .second_section {
+  .second-section {
     display: grid;
     row-gap: 1.25rem;
     grid-template-rows: repeat(4 * 1fr);
   }
 
-  .second_section .content__title {
+  .second-section .content__title {
     width: 30%;
     grid-row: 1;
   }
 
-  .picture_block {
+  .picture-block {
     gap: 1.25rem;
     grid-template-areas:
       'sunset sunset ice-cream'
@@ -344,12 +345,12 @@ a:focus-visible {
     grid-row-end: 2;
   }
 
-  .first_section,
-  .third_section {
+  .first-section,
+  .third-section {
     column-gap: 0.75rem;
   }
 
-  .second_section {
+  .second-section {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: min-content 1fr;
     column-gap: 1.25rem;

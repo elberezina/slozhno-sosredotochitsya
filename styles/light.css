@@ -11,6 +11,12 @@
   --bg-color: #fff1f7;
   --hover-color: rgb(50 49 45 / 0.4);
   --bg-image: url(../images/cover-image-light.png);
+
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .theme_light .header__decor::before,
@@ -41,6 +47,14 @@
     --bg-color: #fff1f7;
     --hover-color: rgb(50 49 45 / 0.4);
     --bg-image: url(../images/cover-image-light.png);
+  }
+
+  .page.theme_auto {
+    background-image: var(--bg-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
   }
 
   .theme_auto .header__decor::before,
