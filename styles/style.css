@@ -1,4 +1,9 @@
 .page {
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   background-color: var(--bg-color);
   font-size: 18px;
   line-height: 23.4px;
@@ -7,11 +12,6 @@
 }
 
 .header {
-  background-image: var(--bg-image);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
   padding: 0.63rem;
   min-height: 100vh;
   display: grid;
@@ -213,7 +213,6 @@ a:focus-visible {
 }
 
 @media (width >= 768px) {
-
   .header,
   .main {
     padding: 1.25rem;
@@ -323,7 +322,6 @@ a:focus-visible {
 }
 
 @media (width >= 1024px) {
-
   .header__theme-menu {
     justify-self: center;
     align-self: start;
